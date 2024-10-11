@@ -1,0 +1,180 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* เปลี่ยนพื้นหลังเป็นสีดำ */
+    color: #ffffff; /* เปลี่ยนสีตัวอักษรหลักเป็นสีขาว */
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px 10px; /* ลดขนาด padding */
+    background: #1c1c1c; /* ใช้สีดำเข้มสำหรับแถบหัวเรื่อง */
+    color: #ffffff; /* ใช้สีขาวสำหรับข้อความในหัวเรื่อง */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #333333; /* เส้นขอบด้านล่างสีเทาเข้ม */
+}
+
+.header h1 {
+    font-size: 28px; /* ลดขนาดตัวอักษรของหัวเรื่อง */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #ffffff; /* สีขาว */
+}
+
+.header p {
+    font-size: 14px; /* ลดขนาดตัวอักษรรอง */
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #cccccc; /* ใช้สีเทาอ่อนสำหรับข้อความรอง */
+}
+
+
+/* Creators Section */
+.creators-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* เพิ่มช่องว่างระหว่างการ์ดเล็กน้อย */
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.creator-card {
+    background-color: #1e1e1e; /* เปลี่ยนสีการ์ดโปรไฟล์เป็นดำเทา */
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 30px; /* เพิ่ม padding การ์ด */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px; /* ขยายขนาดการ์ด */
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.creator-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); /* เพิ่มความเข้มของเงา */
+    background-color: #333333; /* เปลี่ยนสีการ์ดเมื่อ hover */
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 160px; /* ขยายขนาดรูปโปรไฟล์ */
+    height: 160px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #ffffff; /* เส้นขอบสีขาว */
+    transition: transform 0.3s ease;
+}
+
+.profile-picture img:hover {
+    transform: scale(1.1);
+}
+
+.creator-card h2 {
+    font-size: 24px; /* ปรับขนาดชื่อใหญ่ขึ้นเล็กน้อย */
+    font-weight: 500;
+    color: #ffffff; /* สีขาว */
+    margin-bottom: 10px;
+}
+
+.creator-card p {
+    font-size: 16px; /* ปรับขนาดข้อความให้ใหญ่ขึ้นเล็กน้อย */
+    font-weight: 300;
+    color: #cccccc; /* ใช้สีเทาอ่อนสำหรับข้อความในการ์ด */
+    line-height: 1.5;
+}
+
+.creator-card h2:hover {
+    color: #cccccc; /* เปลี่ยนสีชื่อเมื่อ hover เป็นสีเทาอ่อน */
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 25px; /* ขยายขนาดไอคอน */
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #1c1c1c; /* สีดำเข้มสำหรับพื้นหลัง footer */
+    color: #ffffff; /* สีขาวสำหรับข้อความ */
+    border-top: 2px solid #333333; /* เส้นขอบด้านบนสีเทาเข้ม */
+}
+
+.footer p {
+    font-size: 14px;
+    color: #cccccc; /* สีเทาอ่อนใน footer */
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .creator-card {
+        width: 250px;
+    }
+
+    .profile-picture img {
+        width: 140px; /* ปรับขนาดรูปโปรไฟล์สำหรับหน้าจอขนาดกลาง */
+        height: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .creators-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .creator-card {
+        width: 80vw;
+    }
+
+    .profile-picture img {
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .creator-card h2 {
+        font-size: 5vw;
+    }
+
+    .creator-card p {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 6vw;
+    }
+
+    .header p {
+        font-size: 3.5vw;
+    }
+
+    .footer {
+        font-size: 3vw;
+    }
+}

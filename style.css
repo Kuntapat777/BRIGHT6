@@ -1,0 +1,387 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+body {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+        url(imges/img77.png) no-repeat center center fixed; 
+    background-size: cover;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    backdrop-filter: blur(15px);
+}
+
+/* Hide scrollbar but keep scrolling functionality */
+body::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for webkit browsers */
+}
+
+/* For Firefox */
+body {
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+
+
+/* Anchor Tags */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #00ffae;
+    text-shadow: 0 0 10px rgba(0, 255, 174, 0.8);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(10, 10, 10, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+header.sticky {
+    padding: 10px 50px;
+    background-color: rgba(10, 10, 10, 1); /* Darken when sticky */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    filter: drop-shadow(0 4px 4px rgba(0, 255, 174, 0.6));
+}
+
+.logo-text {
+    font-size: 30px; /* Increased size */
+    font-weight: bold;
+    color: #00ffae;
+    text-shadow: 0 0 15px rgba(0, 255, 174, 0.8); /* Stronger shadow */
+}
+
+/* Navigation */
+.navlist {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Increased gap for better balance */
+}
+
+.navlist li a {
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 1.5px;
+    padding: 5px 0; /* Padding to increase clickable area */
+}
+
+.navlist li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #00ffae;
+    transition: width 0.3s ease;
+}
+
+.navlist li a:hover::after {
+    width: 100%;
+}
+
+.nav-btn {
+    background-color: #00ffae;
+    color: #000;
+    padding: 12px 28px; /* Adjusted padding */
+    border-radius: 30px;
+    font-weight: 700; /* Bolder font weight */
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 255, 174, 0.5);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #00e69c;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 255, 174, 0.7);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 50px; /* Increased padding for more space */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    gap: 40px; /* Increased gap for better alignment */
+    backdrop-filter: blur(10px);
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 600px;
+    text-align: left;
+    flex: 1;
+}
+
+.hero h5 {
+    font-size: 26px; /* Slightly increased for prominence */
+    color: #00ffae;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(0, 255, 174, 0.7);
+}
+
+.hero h1 {
+    font-size: 70px; /* Increased for more impact */
+    font-weight: 800; /* Bolder font weight */
+    letter-spacing: 3px; /* Increased spacing */
+    color: #00ffae;
+    text-shadow: 0 0 20px rgba(0, 255, 174, 0.9);
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.hero p {
+    font-size: 20px; /* Increased size for readability */
+    margin: 25px 0;
+    max-width: 500px;
+    line-height: 1.8;
+    color: #dcdcdc;
+}
+
+.btn {
+    background-color: #00ffae;
+    color: #333;
+    padding: 14px 35px; /* Adjusted padding */
+    border-radius: 50px; /* More rounded corners */
+    font-size: 20px; /* Increased size for visibility */
+    font-weight: 700; /* Bolder font weight */
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 255, 174, 0.5);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    background-color: #00e69c;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 255, 174, 0.7);
+}
+
+/* Hero Image */
+.hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; /* Adjusted gap */
+    padding: 20px 0; /* Reduced padding for balance */
+    flex-wrap: wrap;
+}
+
+.image-container {
+    text-align: center; /* Center the image caption */
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 350px; /* Slightly increased for impact */
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, filter 0.3s ease; /* Added filter transition */
+    filter: brightness(0.9);
+    border: 5px solid rgba(0, 255, 174, 0.5);
+}
+
+.hero-img img:hover {
+    transform: scale(1.1); /* Slightly larger scale on hover */
+    filter: brightness(1);
+}
+
+figcaption {
+    margin-top: 10px; /* Adjusted spacing */
+    font-size: 18px; /* Increased for readability */
+    color: #ffffff; /* Color remains the same */
+    text-align: center; /* Centered caption */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(10, 10, 10, 0.9);
+    color: #fff;
+    font-size: 16px; /* Increased for readability */
+    letter-spacing: 1px;
+}
+
+/* Call to Action Section */
+.cta {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 50px; /* Increased padding */
+    text-align: center;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    margin: 60px auto; /* Centering the section */
+    max-width: 800px; /* Restricting width for better readability */
+}
+
+.cta h2 {
+    font-size: 32px; /* Increased for impact */
+    color: #00ffae;
+    margin-bottom: 15px; /* Increased margin */
+}
+
+.cta p {
+    font-size: 20px; /* Increased for readability */
+    color: #dcdcdc;
+    margin-bottom: 25px; /* Increased margin */
+}
+
+.cta .btn {
+    background-color: #00ffae;
+    color: #333;
+    padding: 14px 35px; /* Adjusted padding */
+    border-radius: 50px; /* More rounded corners */
+    font-size: 20px; /* Increased size for visibility */
+    font-weight: 700; /* Bolder font weight */
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 255, 174, 0.5);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.cta .btn:hover {
+    background-color: #00e69c;
+    transform: translateY(-5px);
+}
+
+/* Tree Tips Section */
+.tree-tips {
+    background-color: rgba(10, 10, 10, 0.8); /* Semi-transparent background */
+    padding: 50px 20px; /* Increased padding */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    margin: 60px auto; /* Centered with margin */
+    max-width: 800px; /* Maximum width */
+    color: #ffffff; /* Text color */
+}
+
+.tree-tips h2 {
+    font-size: 32px; /* Increased size for prominence */
+    color: #00ffae; /* Heading color */
+    text-align: center; /* Centered heading */
+    margin-bottom: 25px; /* Increased margin */
+}
+
+.tip {
+    background-color: rgba(255, 255, 255, 0.1); /* Light background for each tip */
+    padding: 25px; /* Increased padding */
+    border-radius: 10px; /* Rounded corners for tips */
+    margin-bottom: 20px; /* Margin between tips */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animation for hover effect */
+}
+
+.tip:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    background-color: rgba(255, 255, 255, 0.3); /* Darken on hover */
+}
+
+.tip h3 {
+    font-size: 24px; /* Increased size for tip titles */
+    color: #00ffae; /* Title color */
+    margin-bottom: 15px; /* Increased margin */
+}
+
+.tip p {
+    font-size: 18px; /* Increased font size for better readability */
+    line-height: 1.6; /* Line height for readability */
+    color: #dcdcdc; /* Color for paragraph text */
+}
+
+/* Responsive Styles for New Sections */
+@media (max-width: 768px) {
+    .cta, .testimonials {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .cta h2, .testimonials h2 {
+        font-size: 26px; /* Adjust heading size for smaller screens */
+    }
+
+    .cta p, .testimonial {
+        font-size: 16px; /* Adjust paragraph size for smaller screens */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px; /* Adjusted padding */
+    }
+
+    .hero h1 {
+        font-size: 52px; /* Size remains the same */
+    }
+
+    .hero-img {
+        flex-direction: column;
+        gap: 20px; /* Gap remains the same */
+    }
+
+    .hero-img img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px; /* Gap remains the same */
+    }
+
+    .navlist {
+        flex-direction: column;
+        gap: 15px; /* Gap remains the same */
+    }
+
+    .btn {
+        font-size: 14px; /* Size remains the same */
+    }
+
+    .hero p {
+        font-size: 14px; /* Size remains the same */
+    }
+}

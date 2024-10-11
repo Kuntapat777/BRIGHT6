@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Registration Form | Codehal</title>
+    <link rel="stylesheet" href="registration.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="register.php" method="post">
+            <h1>สมัครสมาชิก</h1>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" name="full_name" placeholder="ชื่อ-นามสกุล" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" name="username" placeholder="ชื่อผู้ใช้" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="email" name="email" placeholder="อีเมล" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="number" name="phone_number" placeholder="เบอร์โทรศัพท์" required>
+                    <i class='bx bxs-phone'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="password" name="password" placeholder="รหัสผ่าน" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="password" name="confirm_password" placeholder="ยืนยันรหัสผ่าน" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+            </div>
+            <div class="input-box terms">
+                <label>
+                    <input type="checkbox" name="terms" required> ยืนยันว่าข้อมูลมีความถูกต้อง
+                </label>
+            </div>
+            <button type="submit" class="btn">ยืนยัน</button>
+        </form>
+    </div>
+</body>
+</html>
